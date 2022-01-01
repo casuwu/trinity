@@ -59,6 +59,7 @@ contract GovernorAlpha is CavernDomain {
         address[] targets;
         string[] signatures;
         bytes[] calldatas;
+        string description;
         bool canceled;
         bool executed;
         mapping(address => Receipt) receipts;
@@ -113,7 +114,6 @@ contract GovernorAlpha is CavernDomain {
      */
     function propose(
         address[] memory targets,
-        uint256[] memory values,
         string[] memory signatures,
         bytes[] memory calldatas,
         string memory description
@@ -124,7 +124,6 @@ contract GovernorAlpha is CavernDomain {
             "proposer votes below proposal threshold"
         );
         require(
-            targets.length == values.length &&
                 targets.length == signatures.length &&
                 targets.length == calldatas.length,
             "param lengths must match"
@@ -158,7 +157,6 @@ contract GovernorAlpha is CavernDomain {
         newProp.proposer = msg.sender;
         newProp.eta = 0;
         newProp.targets = targets;
-        newProp.values = values;
         newProp.signatures = signatures;
         newProp.calldatas = calldatas;
         newProp.startBlock = startBlock;
@@ -167,19 +165,9 @@ contract GovernorAlpha is CavernDomain {
         newProp.againstVotes = 0;
         newProp.canceled = false;
         newProp.executed = false;
+        newProp.description = description;
 
         latestProposalIds[newProp.proposer] = newProp.id;
-        emit ProposalCreated(
-            newProp.id,
-            msg.sender,
-            targets,
-            values,
-            signatures,
-            calldatas,
-            startBlock,
-            endBlock,
-            description
-        );
         return newProp.id;
     }
 
