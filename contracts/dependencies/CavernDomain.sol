@@ -1,3 +1,5 @@
+    pragma solidity ^0.8.6;
+
     contract CavernDomain {
 
     bytes32 public DOMAIN_SEPARATOR;

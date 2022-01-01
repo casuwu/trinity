@@ -1,3 +1,5 @@
+pragma solidity ^0.8.6;
+
 interface TimelockInterface {
     function delay() external view returns (uint);
     function GRACE_PERIOD() external view returns (uint);

@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.6;
 pragma experimental ABIEncoderV2;
 
 import "../library/SafeMath.sol";
@@ -225,9 +225,8 @@ contract GovernorAlpha is CavernDomain {
     }
 
     function cancel(uint256 proposalId) public {
-        ProposalState _state = state(proposalId);
         require(
-            _state != ProposalState.Executed,
+            state(proposalId) != ProposalState.Executed,
             "GovernorAlpha::cancel: cannot cancel executed proposal"
         );
         Proposal storage proposal = proposals[proposalId];
@@ -341,9 +340,10 @@ contract GovernorAlpha is CavernDomain {
         }
     }
 
-    /*
-     *    Guardian functions
-     */
+    ///////////////////////////////////////////////////////
+    //////////////////////  GUARDIAN   ////////////////////
+    ///////////////////////////////////////////////////////
+
     function __acceptAdmin() public {
         require(msg.sender == guardian, "!guardian");
         timelock.acceptAdmin();
@@ -382,9 +382,10 @@ contract GovernorAlpha is CavernDomain {
         );
     }
 
-    /*
-     *    Internal functions
-     */
+    ///////////////////////////////////////////////////////
+    //////////////////////  INTERNAL   ////////////////////
+    ///////////////////////////////////////////////////////
+    
     function _castVote(
         address voter,
         uint256 proposalId,
