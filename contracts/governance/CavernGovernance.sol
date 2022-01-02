@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.6;
 pragma experimental ABIEncoderV2;
 
@@ -48,15 +50,32 @@ contract GovernorAlpha is CavernDomain {
         keccak256("Ballot(uint256 proposalId,bool support)");
 
     struct Proposal {
+        /// @notice Unique id for looking up a proposal
         uint256 id;
+
+        /// @notice The timestamp that the proposal will be available for execution, set once the vote succeeds
         uint256 eta;
+
+        ///@notice The point at which holders must delegate their votes
         uint256 startBlock;
+
+        ///@notice The block at which voting ends
         uint256 endBlock;
+
+        ///@notice Votes for the proposal
         uint256 forVotes;
+
+        ///@notice Votes against the proposal
         uint256 againstVotes;
+
+        ///@notice 
         uint256[] values;
-        address proposer;
+        address proposer; 
+
+        ///@notice The ordered list of target addresses for calls to be made                                                                                      
         address[] targets;
+
+        ///@notice The ordered list of function signatures to be called
         string[] signatures;
         bytes[] calldatas;
         string description;
@@ -163,7 +182,11 @@ contract GovernorAlpha is CavernDomain {
         newProp.endBlock = endBlock;
         newProp.forVotes = 0;
         newProp.againstVotes = 0;
+
+        /// @notice Flag marking whether the proposal has been canceled
         newProp.canceled = false;
+
+        /// @notice Flag marking whether the proposal has been executed
         newProp.executed = false;
         newProp.description = description;
 
