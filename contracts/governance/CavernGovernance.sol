@@ -1,4 +1,4 @@
-pragma solidity ^0.8.6;
+pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 
 import "../library/SafeMath.sol";
@@ -48,18 +48,23 @@ contract GovernorAlpha is CavernDomain {
         keccak256("Ballot(uint256 proposalId,bool support)");
 
     struct Proposal {
+        /// @notice unique id for looking up a proposal
         uint256 id;
+        /// @notice The ordered list of target addresses for calls to be made
         uint256 eta;
         uint256 startBlock;
         uint256 endBlock;
         uint256 forVotes;
         uint256 againstVotes;
+        /// @notice The ordered list of of values (i.e. msg.value) to be passed to the calls to be made
         uint256[] values;
         address proposer;
+        /// @notice The ordered list of target addresses for calls to be made
         address[] targets;
+        /// @notice The ordered list of function signatures to be called
         string[] signatures;
+        /// @notice The ordered list of calldata to be passed to each call
         bytes[] calldatas;
-        string description;
         bool canceled;
         bool executed;
         mapping(address => Receipt) receipts;
@@ -114,6 +119,7 @@ contract GovernorAlpha is CavernDomain {
      */
     function propose(
         address[] memory targets,
+        uint256[] memory values,
         string[] memory signatures,
         bytes[] memory calldatas,
         string memory description
@@ -124,6 +130,7 @@ contract GovernorAlpha is CavernDomain {
             "proposer votes below proposal threshold"
         );
         require(
+            targets.length == values.length &&
                 targets.length == signatures.length &&
                 targets.length == calldatas.length,
             "param lengths must match"
@@ -157,6 +164,7 @@ contract GovernorAlpha is CavernDomain {
         newProp.proposer = msg.sender;
         newProp.eta = 0;
         newProp.targets = targets;
+        newProp.values = values;
         newProp.signatures = signatures;
         newProp.calldatas = calldatas;
         newProp.startBlock = startBlock;
@@ -165,9 +173,19 @@ contract GovernorAlpha is CavernDomain {
         newProp.againstVotes = 0;
         newProp.canceled = false;
         newProp.executed = false;
-        newProp.description = description;
 
         latestProposalIds[newProp.proposer] = newProp.id;
+        emit ProposalCreated(
+            newProp.id,
+            msg.sender,
+            targets,
+            values,
+            signatures,
+            calldatas,
+            startBlock,
+            endBlock,
+            description
+        );
         return newProp.id;
     }
 
@@ -329,9 +347,8 @@ contract GovernorAlpha is CavernDomain {
     }
 
     ///////////////////////////////////////////////////////
-    //////////////////////  GUARDIAN   ////////////////////
+    //////////////////////  GUARDIAN  /////////////////////////
     ///////////////////////////////////////////////////////
-
     function __acceptAdmin() public {
         require(msg.sender == guardian, "!guardian");
         timelock.acceptAdmin();
@@ -370,10 +387,9 @@ contract GovernorAlpha is CavernDomain {
         );
     }
 
-    ///////////////////////////////////////////////////////
-    //////////////////////  INTERNAL   ////////////////////
-    ///////////////////////////////////////////////////////
-    
+    /*
+     *    Internal functions
+     */
     function _castVote(
         address voter,
         uint256 proposalId,
