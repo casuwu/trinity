@@ -746,10 +746,10 @@
 			]
 		},
 		"contracts/governance/CavernGovernance.sol": {
-			"keccak256": "0x1b38cfa2c7e90d6bd2ccc3b9cda47a048b057ef2745850c3ba54fde11e7d4d50",
+			"keccak256": "0x02d03a1856a7c1a9da7dba1eaf0509d19f2a72db26cfdc2a98452ee047bb7a9d",
 			"urls": [
-				"bzz-raw://5c64f874907799ad6d6525c87739f5d22577f4bdb677d68ac65e0a90fae7f69d",
-				"dweb:/ipfs/Qmb7kMUgjyBqJ7ewFyCCABeTHu5pDQ5fNe6oPnNfAyJG5h"
+				"bzz-raw://eb7bc547298444ec23b2fe226e57ab1bd74fe1898afd11a47ea04feaff9caa97",
+				"dweb:/ipfs/QmXuyNLaWBLKSiDfgYGV6vBeMdY9BWM8p5oYVm2A7bPKTw"
 			]
 		},
 		"contracts/library/SafeMath.sol": {
