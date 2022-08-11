@@ -1,0 +1,567 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_pid",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_pid",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "pendingJoe",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_pid",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "userInfo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "rewardDebt",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_pid",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "deposit(uint256,uint256)": "e2bbb158",
+    "pendingJoe(uint256,address)": "3ccb2149",
+    "userInfo(uint256,address)": "93f1a40b",
+    "withdraw(uint256,uint256)": "441a3e70"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/steakhut/interfaces/ISteakMasterChef.sol",
+    "id": 44763,
+    "exportedSymbols": {
+      "ISteakMasterChef": [
+        44762
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:381:136",
+    "nodes": [
+      {
+        "id": 44727,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:136",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 44762,
+        "nodeType": "ContractDefinition",
+        "src": "57:355:136",
+        "nodes": [
+          {
+            "id": 44734,
+            "nodeType": "FunctionDefinition",
+            "src": "90:57:136",
+            "functionSelector": "e2bbb158",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "99:7:136",
+            "parameters": {
+              "id": 44732,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44729,
+                  "mutability": "mutable",
+                  "name": "_pid",
+                  "nameLocation": "115:4:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44734,
+                  "src": "107:12:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44728,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "107:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44731,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "129:7:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44734,
+                  "src": "121:15:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44730,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "121:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "106:31:136"
+            },
+            "returnParameters": {
+              "id": 44733,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "146:0:136"
+            },
+            "scope": 44762,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44741,
+            "nodeType": "FunctionDefinition",
+            "src": "153:58:136",
+            "functionSelector": "441a3e70",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "162:8:136",
+            "parameters": {
+              "id": 44739,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44736,
+                  "mutability": "mutable",
+                  "name": "_pid",
+                  "nameLocation": "179:4:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44741,
+                  "src": "171:12:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44735,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "171:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44738,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "193:7:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44741,
+                  "src": "185:15:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44737,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "170:31:136"
+            },
+            "returnParameters": {
+              "id": 44740,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "210:0:136"
+            },
+            "scope": 44762,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44752,
+            "nodeType": "FunctionDefinition",
+            "src": "217:106:136",
+            "functionSelector": "93f1a40b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "userInfo",
+            "nameLocation": "226:8:136",
+            "parameters": {
+              "id": 44746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44743,
+                  "mutability": "mutable",
+                  "name": "_pid",
+                  "nameLocation": "243:4:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44752,
+                  "src": "235:12:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44742,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "235:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44745,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "257:5:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44752,
+                  "src": "249:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44744,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "249:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "234:29:136"
+            },
+            "returnParameters": {
+              "id": 44751,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44748,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "295:6:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44752,
+                  "src": "287:14:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44747,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "287:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44750,
+                  "mutability": "mutable",
+                  "name": "rewardDebt",
+                  "nameLocation": "311:10:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44752,
+                  "src": "303:18:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44749,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "303:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:36:136"
+            },
+            "scope": 44762,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44761,
+            "nodeType": "FunctionDefinition",
+            "src": "329:81:136",
+            "functionSelector": "3ccb2149",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pendingJoe",
+            "nameLocation": "338:10:136",
+            "parameters": {
+              "id": 44757,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44754,
+                  "mutability": "mutable",
+                  "name": "_pid",
+                  "nameLocation": "357:4:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44761,
+                  "src": "349:12:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44753,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44756,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "371:5:136",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44761,
+                  "src": "363:13:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44755,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "363:7:136",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "348:29:136"
+            },
+            "returnParameters": {
+              "id": 44760,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44759,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44761,
+                  "src": "401:7:136",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44758,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "401:7:136",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "400:9:136"
+            },
+            "scope": 44762,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISteakMasterChef",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44762
+        ],
+        "name": "ISteakMasterChef",
+        "nameLocation": "67:16:136",
+        "scope": 44763,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 136
+}

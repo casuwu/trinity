@@ -1,0 +1,2290 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "initiator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "fee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onFlashLoan",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "onFlashLoan(address,address,uint256,uint256,bytes)": "23e30c8b"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/bankerjoe/interfaces/IJoeERC20Delegator.sol",
+    "id": 22227,
+    "exportedSymbols": {
+      "ERC3156FlashBorrowerInterface": [
+        22226
+      ],
+      "IERC20": [
+        5340
+      ],
+      "IJoeERC20Delegator": [
+        22209
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:9034:54",
+    "nodes": [
+      {
+        "id": 22030,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:54",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 22031,
+        "nodeType": "ImportDirective",
+        "src": "57:40:54",
+        "absolutePath": "src/contracts/interfaces/IERC20.sol",
+        "file": "../../../interfaces/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 22227,
+        "sourceUnit": 5341,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 22209,
+        "nodeType": "ContractDefinition",
+        "src": "261:8064:54",
+        "nodes": [
+          {
+            "id": 22041,
+            "nodeType": "FunctionDefinition",
+            "src": "650:61:54",
+            "documentation": {
+              "id": 22034,
+              "nodeType": "StructuredDocumentation",
+              "src": "306:339:54",
+              "text": " @notice Sender supplies assets into the market and receives jTokens in exchange\n @dev Accrues interest whether or not the operation succeeds, unless reverted\n @param mintAmount The amount of the underlying asset to supply\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "a0712d68",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "659:4:54",
+            "parameters": {
+              "id": 22037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22036,
+                  "mutability": "mutable",
+                  "name": "mintAmount",
+                  "nameLocation": "672:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22041,
+                  "src": "664:18:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22035,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "664:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "663:20:54"
+            },
+            "returnParameters": {
+              "id": 22040,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22039,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22041,
+                  "src": "702:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22038,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "702:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "701:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22049,
+            "nodeType": "FunctionDefinition",
+            "src": "1054:65:54",
+            "documentation": {
+              "id": 22042,
+              "nodeType": "StructuredDocumentation",
+              "src": "717:332:54",
+              "text": " @notice Sender redeems jTokens in exchange for the underlying asset\n @dev Accrues interest whether or not the operation succeeds, unless reverted\n @param redeemTokens The number of jTokens to redeem into underlying\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "db006a75",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeem",
+            "nameLocation": "1063:6:54",
+            "parameters": {
+              "id": 22045,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22044,
+                  "mutability": "mutable",
+                  "name": "redeemTokens",
+                  "nameLocation": "1078:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22049,
+                  "src": "1070:20:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22043,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1070:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1069:22:54"
+            },
+            "returnParameters": {
+              "id": 22048,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22047,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22049,
+                  "src": "1110:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22046,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1110:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1109:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22057,
+            "nodeType": "FunctionDefinition",
+            "src": "1467:75:54",
+            "documentation": {
+              "id": 22050,
+              "nodeType": "StructuredDocumentation",
+              "src": "1125:337:54",
+              "text": " @notice Sender redeems jTokens in exchange for a specified amount of underlying asset\n @dev Accrues interest whether or not the operation succeeds, unless reverted\n @param redeemAmount The amount of underlying to redeem\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "852a12e3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeemUnderlying",
+            "nameLocation": "1476:16:54",
+            "parameters": {
+              "id": 22053,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22052,
+                  "mutability": "mutable",
+                  "name": "redeemAmount",
+                  "nameLocation": "1501:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22057,
+                  "src": "1493:20:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22051,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1493:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1492:22:54"
+            },
+            "returnParameters": {
+              "id": 22056,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22055,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22057,
+                  "src": "1533:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22054,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1533:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1532:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22065,
+            "nodeType": "FunctionDefinition",
+            "src": "1799:65:54",
+            "documentation": {
+              "id": 22058,
+              "nodeType": "StructuredDocumentation",
+              "src": "1548:246:54",
+              "text": " @notice Sender borrows assets from the protocol to their own address\n @param borrowAmount The amount of the underlying asset to borrow\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "c5ebeaec",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "borrow",
+            "nameLocation": "1808:6:54",
+            "parameters": {
+              "id": 22061,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22060,
+                  "mutability": "mutable",
+                  "name": "borrowAmount",
+                  "nameLocation": "1823:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22065,
+                  "src": "1815:20:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22059,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1815:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1814:22:54"
+            },
+            "returnParameters": {
+              "id": 22064,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22063,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22065,
+                  "src": "1855:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22062,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1855:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1854:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22073,
+            "nodeType": "FunctionDefinition",
+            "src": "2065:69:54",
+            "documentation": {
+              "id": 22066,
+              "nodeType": "StructuredDocumentation",
+              "src": "1870:190:54",
+              "text": " @notice Sender repays their own borrow\n @param repayAmount The amount to repay\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "0e752702",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "repayBorrow",
+            "nameLocation": "2074:11:54",
+            "parameters": {
+              "id": 22069,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22068,
+                  "mutability": "mutable",
+                  "name": "repayAmount",
+                  "nameLocation": "2094:11:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22073,
+                  "src": "2086:19:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22067,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2086:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2085:21:54"
+            },
+            "returnParameters": {
+              "id": 22072,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22071,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22073,
+                  "src": "2125:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22070,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2125:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2124:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22083,
+            "nodeType": "FunctionDefinition",
+            "src": "2414:93:54",
+            "documentation": {
+              "id": 22074,
+              "nodeType": "StructuredDocumentation",
+              "src": "2140:269:54",
+              "text": " @notice Sender repays a borrow belonging to borrower\n @param borrower the account with the debt being payed off\n @param repayAmount The amount to repay\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "2608f818",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "repayBorrowBehalf",
+            "nameLocation": "2423:17:54",
+            "parameters": {
+              "id": 22079,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22076,
+                  "mutability": "mutable",
+                  "name": "borrower",
+                  "nameLocation": "2449:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22083,
+                  "src": "2441:16:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22075,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2441:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22078,
+                  "mutability": "mutable",
+                  "name": "repayAmount",
+                  "nameLocation": "2467:11:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22083,
+                  "src": "2459:19:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22077,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2459:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2440:39:54"
+            },
+            "returnParameters": {
+              "id": 22082,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22081,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22083,
+                  "src": "2498:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22080,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2498:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2497:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22087,
+            "nodeType": "FunctionDefinition",
+            "src": "3302:25:54",
+            "documentation": {
+              "id": 22084,
+              "nodeType": "StructuredDocumentation",
+              "src": "3113:184:54",
+              "text": " @notice Gulps excess contract cash to reserves\n @dev This function calculates excess ERC20 gained from a ERC20.transfer() call and adds the excess to reserves."
+            },
+            "functionSelector": "94909e62",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gulp",
+            "nameLocation": "3311:4:54",
+            "parameters": {
+              "id": 22085,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3315:2:54"
+            },
+            "returnParameters": {
+              "id": 22086,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3326:0:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22102,
+            "nodeType": "FunctionDefinition",
+            "src": "3683:177:54",
+            "documentation": {
+              "id": 22088,
+              "nodeType": "StructuredDocumentation",
+              "src": "3333:345:54",
+              "text": " @notice Flash loan funds to a given account.\n @param receiver The receiver address for the funds\n @param initiator flash loan initiator\n @param amount The amount of the funds to be loaned\n @param data The other data\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "5cffe9de",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flashLoan",
+            "nameLocation": "3692:9:54",
+            "parameters": {
+              "id": 22098,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22091,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "3741:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22102,
+                  "src": "3711:38:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ERC3156FlashBorrowerInterface_$22226",
+                    "typeString": "contract ERC3156FlashBorrowerInterface"
+                  },
+                  "typeName": {
+                    "id": 22090,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 22089,
+                      "name": "ERC3156FlashBorrowerInterface",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 22226,
+                      "src": "3711:29:54"
+                    },
+                    "referencedDeclaration": 22226,
+                    "src": "3711:29:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC3156FlashBorrowerInterface_$22226",
+                      "typeString": "contract ERC3156FlashBorrowerInterface"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22093,
+                  "mutability": "mutable",
+                  "name": "initiator",
+                  "nameLocation": "3767:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22102,
+                  "src": "3759:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22092,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3759:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22095,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "3794:6:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22102,
+                  "src": "3786:14:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22094,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3786:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22097,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "3825:4:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22102,
+                  "src": "3810:19:54",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 22096,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3810:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3701:134:54"
+            },
+            "returnParameters": {
+              "id": 22101,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22100,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22102,
+                  "src": "3854:4:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 22099,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3854:4:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3853:6:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22110,
+            "nodeType": "FunctionDefinition",
+            "src": "4117:72:54",
+            "documentation": {
+              "id": 22103,
+              "nodeType": "StructuredDocumentation",
+              "src": "3866:246:54",
+              "text": " @notice Register account collateral tokens if there is space.\n @param account The account to register\n @dev This function could only be called by joetroller.\n @return The actual registered amount of collateral"
+            },
+            "functionSelector": "8897bd85",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerCollateral",
+            "nameLocation": "4126:18:54",
+            "parameters": {
+              "id": 22106,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22105,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "4153:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22110,
+                  "src": "4145:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22104,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4145:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4144:17:54"
+            },
+            "returnParameters": {
+              "id": 22109,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22108,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22110,
+                  "src": "4180:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22107,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4180:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4179:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22116,
+            "nodeType": "FunctionDefinition",
+            "src": "4417:56:54",
+            "documentation": {
+              "id": 22111,
+              "nodeType": "StructuredDocumentation",
+              "src": "4195:217:54",
+              "text": " @notice Unregister account collateral tokens if the account still has enough collateral.\n @dev This function could only be called by joetroller.\n @param account The account to unregister"
+            },
+            "functionSelector": "8b35776b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unregisterCollateral",
+            "nameLocation": "4426:20:54",
+            "parameters": {
+              "id": 22114,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22113,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "4455:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22116,
+                  "src": "4447:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22112,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4447:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4446:17:54"
+            },
+            "returnParameters": {
+              "id": 22115,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4472:0:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22124,
+            "nodeType": "FunctionDefinition",
+            "src": "4721:71:54",
+            "documentation": {
+              "id": 22117,
+              "nodeType": "StructuredDocumentation",
+              "src": "4479:237:54",
+              "text": " @notice Get the underlying balance of the `owner`\n @dev This also accrues interest in a transaction\n @param owner The address of the account to query\n @return The amount of underlying owned by `owner`"
+            },
+            "functionSelector": "3af9e669",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOfUnderlying",
+            "nameLocation": "4730:19:54",
+            "parameters": {
+              "id": 22120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22119,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "4758:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22124,
+                  "src": "4750:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22118,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4750:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4749:15:54"
+            },
+            "returnParameters": {
+              "id": 22123,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22122,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22124,
+                  "src": "4783:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22121,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4783:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4782:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22138,
+            "nodeType": "FunctionDefinition",
+            "src": "5129:186:54",
+            "documentation": {
+              "id": 22125,
+              "nodeType": "StructuredDocumentation",
+              "src": "4798:326:54",
+              "text": " @notice Get a snapshot of the account's balances, and the cached exchange rate\n @dev This is used by joetroller to more efficiently perform liquidity checks.\n @param account Address of the account to snapshot\n @return (possible error, token balance, borrow balance, exchange rate mantissa)"
+            },
+            "functionSelector": "c37f68e2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAccountSnapshot",
+            "nameLocation": "5138:18:54",
+            "parameters": {
+              "id": 22128,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22127,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "5165:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22138,
+                  "src": "5157:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22126,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5157:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5156:17:54"
+            },
+            "returnParameters": {
+              "id": 22137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22130,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22138,
+                  "src": "5234:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22129,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5234:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22132,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22138,
+                  "src": "5255:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22131,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5255:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22134,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22138,
+                  "src": "5276:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22133,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5276:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22136,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22138,
+                  "src": "5297:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22135,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5297:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5220:94:54"
+            },
+            "scope": 22209,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22144,
+            "nodeType": "FunctionDefinition",
+            "src": "5481:63:54",
+            "documentation": {
+              "id": 22139,
+              "nodeType": "StructuredDocumentation",
+              "src": "5321:155:54",
+              "text": " @notice Returns the current per-sec borrow interest rate for this jToken\n @return The borrow interest rate per sec, scaled by 1e18"
+            },
+            "functionSelector": "52609750",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "borrowRatePerSecond",
+            "nameLocation": "5490:19:54",
+            "parameters": {
+              "id": 22140,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5509:2:54"
+            },
+            "returnParameters": {
+              "id": 22143,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22142,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22144,
+                  "src": "5535:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22141,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5535:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5534:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22150,
+            "nodeType": "FunctionDefinition",
+            "src": "5710:63:54",
+            "documentation": {
+              "id": 22145,
+              "nodeType": "StructuredDocumentation",
+              "src": "5550:155:54",
+              "text": " @notice Returns the current per-sec supply interest rate for this jToken\n @return The supply interest rate per sec, scaled by 1e18"
+            },
+            "functionSelector": "b1d38974",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supplyRatePerSecond",
+            "nameLocation": "5719:19:54",
+            "parameters": {
+              "id": 22146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5738:2:54"
+            },
+            "returnParameters": {
+              "id": 22149,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22148,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22150,
+                  "src": "5764:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22147,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5764:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5763:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22156,
+            "nodeType": "FunctionDefinition",
+            "src": "5913:58:54",
+            "documentation": {
+              "id": 22151,
+              "nodeType": "StructuredDocumentation",
+              "src": "5779:129:54",
+              "text": " @notice Returns the current total borrows plus accrued interest\n @return The total borrows with interest"
+            },
+            "functionSelector": "73acee98",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalBorrowsCurrent",
+            "nameLocation": "5922:19:54",
+            "parameters": {
+              "id": 22152,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5941:2:54"
+            },
+            "returnParameters": {
+              "id": 22155,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22154,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22156,
+                  "src": "5962:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22153,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5962:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5961:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22164,
+            "nodeType": "FunctionDefinition",
+            "src": "6255:74:54",
+            "documentation": {
+              "id": 22157,
+              "nodeType": "StructuredDocumentation",
+              "src": "5977:273:54",
+              "text": " @notice Accrue interest to updated borrowIndex and then calculate account's borrow balance using the updated borrowIndex\n @param account The address whose balance should be calculated after updating borrowIndex\n @return The calculated balance"
+            },
+            "functionSelector": "17bfdfbc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "borrowBalanceCurrent",
+            "nameLocation": "6264:20:54",
+            "parameters": {
+              "id": 22160,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22159,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "6293:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22164,
+                  "src": "6285:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22158,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6285:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6284:17:54"
+            },
+            "returnParameters": {
+              "id": 22163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22162,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22164,
+                  "src": "6320:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22161,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6320:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6319:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22172,
+            "nodeType": "FunctionDefinition",
+            "src": "6531:78:54",
+            "documentation": {
+              "id": 22165,
+              "nodeType": "StructuredDocumentation",
+              "src": "6335:191:54",
+              "text": " @notice Return the borrow balance of account based on stored data\n @param account The address whose balance should be calculated\n @return The calculated balance"
+            },
+            "functionSelector": "95dd9193",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "borrowBalanceStored",
+            "nameLocation": "6540:19:54",
+            "parameters": {
+              "id": 22168,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22167,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "6568:7:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22172,
+                  "src": "6560:15:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22166,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6560:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6559:17:54"
+            },
+            "returnParameters": {
+              "id": 22171,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22170,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22172,
+                  "src": "6600:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22169,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6600:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6599:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22178,
+            "nodeType": "FunctionDefinition",
+            "src": "6758:58:54",
+            "documentation": {
+              "id": 22173,
+              "nodeType": "StructuredDocumentation",
+              "src": "6615:138:54",
+              "text": " @notice Accrue interest then return the up-to-date exchange rate\n @return Calculated exchange rate scaled by 1e18"
+            },
+            "functionSelector": "bd6d894d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exchangeRateCurrent",
+            "nameLocation": "6767:19:54",
+            "parameters": {
+              "id": 22174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6786:2:54"
+            },
+            "returnParameters": {
+              "id": 22177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22176,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22178,
+                  "src": "6807:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22175,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6807:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6806:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22184,
+            "nodeType": "FunctionDefinition",
+            "src": "7059:62:54",
+            "documentation": {
+              "id": 22179,
+              "nodeType": "StructuredDocumentation",
+              "src": "6822:232:54",
+              "text": " @notice Calculates the exchange rate from the underlying to the JToken\n @dev This function does not accrue interest before calculating the exchange rate\n @return Calculated exchange rate scaled by 1e18"
+            },
+            "functionSelector": "182df0f5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exchangeRateStored",
+            "nameLocation": "7068:18:54",
+            "parameters": {
+              "id": 22180,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7086:2:54"
+            },
+            "returnParameters": {
+              "id": 22183,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22182,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22184,
+                  "src": "7112:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22181,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7112:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7111:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22190,
+            "nodeType": "FunctionDefinition",
+            "src": "7285:51:54",
+            "documentation": {
+              "id": 22185,
+              "nodeType": "StructuredDocumentation",
+              "src": "7127:153:54",
+              "text": " @notice Get cash balance of this jToken in the underlying asset\n @return The quantity of underlying asset owned by this contract"
+            },
+            "functionSelector": "3b1d21a2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getCash",
+            "nameLocation": "7294:7:54",
+            "parameters": {
+              "id": 22186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7301:2:54"
+            },
+            "returnParameters": {
+              "id": 22189,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22188,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22190,
+                  "src": "7327:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22187,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7327:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7326:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22196,
+            "nodeType": "FunctionDefinition",
+            "src": "7589:53:54",
+            "documentation": {
+              "id": 22191,
+              "nodeType": "StructuredDocumentation",
+              "src": "7342:242:54",
+              "text": " @notice Applies accrued interest to total borrows and reserves.\n @dev This calculates interest accrued from the last checkpointed timestamp\n      up to the current timestamp and writes new checkpoint to storage."
+            },
+            "functionSelector": "a6afed95",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "accrueInterest",
+            "nameLocation": "7598:14:54",
+            "parameters": {
+              "id": 22192,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7612:2:54"
+            },
+            "returnParameters": {
+              "id": 22195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22194,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22196,
+                  "src": "7633:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22193,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7633:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7632:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 22208,
+            "nodeType": "FunctionDefinition",
+            "src": "8192:131:54",
+            "documentation": {
+              "id": 22197,
+              "nodeType": "StructuredDocumentation",
+              "src": "7648:539:54",
+              "text": " @notice Transfers collateral tokens (this market) to the liquidator.\n @dev Will fail unless called by another jToken during the process of liquidation.\n  Its absolutely critical to use msg.sender as the borrowed jToken and not a parameter.\n @param liquidator The account receiving seized collateral\n @param borrower The account having collateral seized\n @param seizeTokens The number of jTokens to seize\n @return uint 0=success, otherwise a failure (see ErrorReporter.sol for details)"
+            },
+            "functionSelector": "b2a02ff1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "seize",
+            "nameLocation": "8201:5:54",
+            "parameters": {
+              "id": 22204,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22199,
+                  "mutability": "mutable",
+                  "name": "liquidator",
+                  "nameLocation": "8224:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22208,
+                  "src": "8216:18:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22198,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8216:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22201,
+                  "mutability": "mutable",
+                  "name": "borrower",
+                  "nameLocation": "8252:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22208,
+                  "src": "8244:16:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22200,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8244:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22203,
+                  "mutability": "mutable",
+                  "name": "seizeTokens",
+                  "nameLocation": "8278:11:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22208,
+                  "src": "8270:19:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22202,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8270:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8206:89:54"
+            },
+            "returnParameters": {
+              "id": 22207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22206,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22208,
+                  "src": "8314:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22205,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8314:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8313:9:54"
+            },
+            "scope": 22209,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 22032,
+              "name": "IERC20",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 5340,
+              "src": "293:6:54"
+            },
+            "id": 22033,
+            "nodeType": "InheritanceSpecifier",
+            "src": "293:6:54"
+          }
+        ],
+        "canonicalName": "IJoeERC20Delegator",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          22209,
+          5340
+        ],
+        "name": "IJoeERC20Delegator",
+        "nameLocation": "271:18:54",
+        "scope": 22227,
+        "usedErrors": []
+      },
+      {
+        "id": 22226,
+        "nodeType": "ContractDefinition",
+        "src": "8429:636:54",
+        "nodes": [
+          {
+            "id": 22225,
+            "nodeType": "FunctionDefinition",
+            "src": "8885:178:54",
+            "documentation": {
+              "id": 22210,
+              "nodeType": "StructuredDocumentation",
+              "src": "8475:405:54",
+              "text": " @dev Receive a flash loan.\n @param initiator The initiator of the loan.\n @param token The loan currency.\n @param amount The amount of tokens lent.\n @param fee The additional amount of tokens to repay.\n @param data Arbitrary data structure, intended to contain user-defined parameters.\n @return The keccak256 hash of \"ERC3156FlashBorrower.onFlashLoan\""
+            },
+            "functionSelector": "23e30c8b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onFlashLoan",
+            "nameLocation": "8894:11:54",
+            "parameters": {
+              "id": 22221,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22212,
+                  "mutability": "mutable",
+                  "name": "initiator",
+                  "nameLocation": "8923:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22225,
+                  "src": "8915:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22211,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8915:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22214,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "8950:5:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22225,
+                  "src": "8942:13:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22213,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8942:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22216,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "8973:6:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22225,
+                  "src": "8965:14:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22215,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8965:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22218,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "8997:3:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22225,
+                  "src": "8989:11:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22217,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8989:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22220,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "9025:4:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22225,
+                  "src": "9010:19:54",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 22219,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9010:5:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8905:130:54"
+            },
+            "returnParameters": {
+              "id": 22224,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22223,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22225,
+                  "src": "9054:7:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 22222,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9054:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9053:9:54"
+            },
+            "scope": 22226,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ERC3156FlashBorrowerInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          22226
+        ],
+        "name": "ERC3156FlashBorrowerInterface",
+        "nameLocation": "8439:29:54",
+        "scope": 22227,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 54
+}

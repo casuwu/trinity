@@ -1,0 +1,198 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "claimable_reward_write",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "claimable_reward_write(address,address)": "59b7e409"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/curve/interfaces/ICurveRewardsGaugeReadOnly.sol",
+    "id": 29934,
+    "exportedSymbols": {
+      "ICurveRewardsGaugeReadOnly": [
+        29933
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:164:74",
+    "nodes": [
+      {
+        "id": 29923,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:74",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 29933,
+        "nodeType": "ContractDefinition",
+        "src": "57:138:74",
+        "nodes": [
+          {
+            "id": 29932,
+            "nodeType": "FunctionDefinition",
+            "src": "100:93:74",
+            "functionSelector": "59b7e409",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimable_reward_write",
+            "nameLocation": "109:22:74",
+            "parameters": {
+              "id": 29928,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29925,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "140:4:74",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29932,
+                  "src": "132:12:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29924,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "132:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29927,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "154:5:74",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29932,
+                  "src": "146:13:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29926,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "146:7:74",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "131:29:74"
+            },
+            "returnParameters": {
+              "id": 29931,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29930,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29932,
+                  "src": "184:7:74",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29929,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "184:7:74",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "183:9:74"
+            },
+            "scope": 29933,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICurveRewardsGaugeReadOnly",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          29933
+        ],
+        "name": "ICurveRewardsGaugeReadOnly",
+        "nameLocation": "67:26:74",
+        "scope": 29934,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 74
+}

@@ -1,0 +1,303 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "enter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_share",
+          "type": "uint256"
+        }
+      ],
+      "name": "leave",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "balanceOf(address)": "70a08231",
+    "enter(uint256)": "a59f3e0c",
+    "leave(uint256)": "67dfd4c9"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/traderjoe/interfaces/IJoeBar.sol",
+    "id": 46827,
+    "exportedSymbols": {
+      "IJoeBar": [
+        46826
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:208:144",
+    "nodes": [
+      {
+        "id": 46808,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:144",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 46826,
+        "nodeType": "ContractDefinition",
+        "src": "57:182:144",
+        "nodes": [
+          {
+            "id": 46813,
+            "nodeType": "FunctionDefinition",
+            "src": "81:41:144",
+            "functionSelector": "a59f3e0c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "enter",
+            "nameLocation": "90:5:144",
+            "parameters": {
+              "id": 46811,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46810,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "104:7:144",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46813,
+                  "src": "96:15:144",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 46809,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "96:7:144",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "95:17:144"
+            },
+            "returnParameters": {
+              "id": 46812,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "121:0:144"
+            },
+            "scope": 46826,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 46818,
+            "nodeType": "FunctionDefinition",
+            "src": "128:40:144",
+            "functionSelector": "67dfd4c9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "leave",
+            "nameLocation": "137:5:144",
+            "parameters": {
+              "id": 46816,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46815,
+                  "mutability": "mutable",
+                  "name": "_share",
+                  "nameLocation": "151:6:144",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46818,
+                  "src": "143:14:144",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 46814,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "143:7:144",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "142:16:144"
+            },
+            "returnParameters": {
+              "id": 46817,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "167:0:144"
+            },
+            "scope": 46826,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 46825,
+            "nodeType": "FunctionDefinition",
+            "src": "174:63:144",
+            "functionSelector": "70a08231",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nameLocation": "183:9:144",
+            "parameters": {
+              "id": 46821,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46820,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "201:7:144",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46825,
+                  "src": "193:15:144",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 46819,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "193:7:144",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "192:17:144"
+            },
+            "returnParameters": {
+              "id": 46824,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46823,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46825,
+                  "src": "228:7:144",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 46822,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:7:144",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:9:144"
+            },
+            "scope": 46826,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IJoeBar",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          46826
+        ],
+        "name": "IJoeBar",
+        "nameLocation": "67:7:144",
+        "scope": 46827,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 144
+}

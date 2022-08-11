@@ -1,0 +1,505 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_strategy",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateBoostFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "compound",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_strategy",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_boostFeeBips",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBoostFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_paused",
+          "type": "bool"
+        }
+      ],
+      "name": "setPaused",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "sweepTokens",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "calculateBoostFee(address,uint256)": "f2daef2c",
+    "compound()": "f69e2046",
+    "setBoostFee(address,uint256)": "e580349c",
+    "setPaused(bool)": "16c38b3c",
+    "sweepTokens(address,uint256)": "dec66036"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/interfaces/IBoosterFeeCollector.sol",
+    "id": 5240,
+    "exportedSymbols": {
+      "IBoosterFeeCollector": [
+        5239
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:400:11",
+    "nodes": [
+      {
+        "id": 5207,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:11",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 5239,
+        "nodeType": "ContractDefinition",
+        "src": "57:374:11",
+        "nodes": [
+          {
+            "id": 5214,
+            "nodeType": "FunctionDefinition",
+            "src": "94:72:11",
+            "functionSelector": "e580349c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBoostFee",
+            "nameLocation": "103:11:11",
+            "parameters": {
+              "id": 5212,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5209,
+                  "mutability": "mutable",
+                  "name": "_strategy",
+                  "nameLocation": "123:9:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5214,
+                  "src": "115:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5208,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "115:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5211,
+                  "mutability": "mutable",
+                  "name": "_boostFeeBips",
+                  "nameLocation": "142:13:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5214,
+                  "src": "134:21:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5210,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "134:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "114:42:11"
+            },
+            "returnParameters": {
+              "id": 5213,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "165:0:11"
+            },
+            "scope": 5239,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5219,
+            "nodeType": "FunctionDefinition",
+            "src": "172:42:11",
+            "functionSelector": "16c38b3c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPaused",
+            "nameLocation": "181:9:11",
+            "parameters": {
+              "id": 5217,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5216,
+                  "mutability": "mutable",
+                  "name": "_paused",
+                  "nameLocation": "196:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5219,
+                  "src": "191:12:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5215,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:4:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "190:14:11"
+            },
+            "returnParameters": {
+              "id": 5218,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "213:0:11"
+            },
+            "scope": 5239,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5228,
+            "nodeType": "FunctionDefinition",
+            "src": "220:95:11",
+            "functionSelector": "f2daef2c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateBoostFee",
+            "nameLocation": "229:17:11",
+            "parameters": {
+              "id": 5224,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5221,
+                  "mutability": "mutable",
+                  "name": "_strategy",
+                  "nameLocation": "255:9:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5228,
+                  "src": "247:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5220,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "247:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5223,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "274:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5228,
+                  "src": "266:15:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5222,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "246:36:11"
+            },
+            "returnParameters": {
+              "id": 5227,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5226,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5228,
+                  "src": "306:7:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5225,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "306:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "305:9:11"
+            },
+            "scope": 5239,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5231,
+            "nodeType": "FunctionDefinition",
+            "src": "321:29:11",
+            "functionSelector": "f69e2046",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "compound",
+            "nameLocation": "330:8:11",
+            "parameters": {
+              "id": 5229,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "338:2:11"
+            },
+            "returnParameters": {
+              "id": 5230,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "349:0:11"
+            },
+            "scope": 5239,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5238,
+            "nodeType": "FunctionDefinition",
+            "src": "356:73:11",
+            "functionSelector": "dec66036",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sweepTokens",
+            "nameLocation": "365:11:11",
+            "parameters": {
+              "id": 5236,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5233,
+                  "mutability": "mutable",
+                  "name": "tokenAddress",
+                  "nameLocation": "385:12:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5238,
+                  "src": "377:20:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5232,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "377:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5235,
+                  "mutability": "mutable",
+                  "name": "tokenAmount",
+                  "nameLocation": "407:11:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5238,
+                  "src": "399:19:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5234,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "399:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:43:11"
+            },
+            "returnParameters": {
+              "id": 5237,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "428:0:11"
+            },
+            "scope": 5239,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IBoosterFeeCollector",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          5239
+        ],
+        "name": "IBoosterFeeCollector",
+        "nameLocation": "67:20:11",
+        "scope": 5240,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 11
+}

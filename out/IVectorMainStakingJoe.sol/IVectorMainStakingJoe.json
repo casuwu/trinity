@@ -1,0 +1,335 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getPoolInfo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "pid",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isActive",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "receipt",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "rewardsAddr",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "helper",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getPoolInfo(address)": "06bfa938"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/vector/interfaces/IVectorMainStakingJoe.sol",
+    "id": 48517,
+    "exportedSymbols": {
+      "IVectorMainStakingJoe": [
+        48516
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:772:155",
+    "nodes": [
+      {
+        "id": 48497,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:155",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 48516,
+        "nodeType": "ContractDefinition",
+        "src": "57:746:155",
+        "nodes": [
+          {
+            "id": 48515,
+            "nodeType": "FunctionDefinition",
+            "src": "536:265:155",
+            "documentation": {
+              "id": 48498,
+              "nodeType": "StructuredDocumentation",
+              "src": "95:436:155",
+              "text": "@notice Get the information of a pool\n @param _address the address of the deposit token to fetch information for\n @return pid the pid of the pool\n @return isActive true if the pool is active\n @return token the deposit Token\n @return receipt - the address of the receipt token of this pool\n @return rewardsAddr the address of the rewarder\n @return helper the address of the poolHelper"
+            },
+            "functionSelector": "06bfa938",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPoolInfo",
+            "nameLocation": "545:11:155",
+            "parameters": {
+              "id": 48501,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48500,
+                  "mutability": "mutable",
+                  "name": "_address",
+                  "nameLocation": "565:8:155",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48515,
+                  "src": "557:16:155",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48499,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "557:7:155",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "556:18:155"
+            },
+            "returnParameters": {
+              "id": 48514,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48503,
+                  "mutability": "mutable",
+                  "name": "pid",
+                  "nameLocation": "643:3:155",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48515,
+                  "src": "635:11:155",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 48502,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "635:7:155",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48505,
+                  "mutability": "mutable",
+                  "name": "isActive",
+                  "nameLocation": "665:8:155",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48515,
+                  "src": "660:13:155",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 48504,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "660:4:155",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48507,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "695:5:155",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48515,
+                  "src": "687:13:155",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48506,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "687:7:155",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48509,
+                  "mutability": "mutable",
+                  "name": "receipt",
+                  "nameLocation": "722:7:155",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48515,
+                  "src": "714:15:155",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48508,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "714:7:155",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48511,
+                  "mutability": "mutable",
+                  "name": "rewardsAddr",
+                  "nameLocation": "751:11:155",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48515,
+                  "src": "743:19:155",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48510,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "743:7:155",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48513,
+                  "mutability": "mutable",
+                  "name": "helper",
+                  "nameLocation": "784:6:155",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48515,
+                  "src": "776:14:155",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48512,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "776:7:155",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "621:179:155"
+            },
+            "scope": 48516,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IVectorMainStakingJoe",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          48516
+        ],
+        "name": "IVectorMainStakingJoe",
+        "nameLocation": "67:21:155",
+        "scope": 48517,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 155
+}

@@ -1,0 +1,269 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "claim",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getPendingVeJoe",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "claim()": "4e71d92d",
+    "deposit(uint256)": "b6b55f25",
+    "getPendingVeJoe(address)": "fc2f53b6"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/traderjoe/interfaces/IVeJoeStaking.sol",
+    "id": 47106,
+    "exportedSymbols": {
+      "IVeJoeStaking": [
+        47105
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:211:149",
+    "nodes": [
+      {
+        "id": 47089,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:149",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 47105,
+        "nodeType": "ContractDefinition",
+        "src": "57:185:149",
+        "nodes": [
+          {
+            "id": 47094,
+            "nodeType": "FunctionDefinition",
+            "src": "87:43:149",
+            "functionSelector": "b6b55f25",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "96:7:149",
+            "parameters": {
+              "id": 47092,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47091,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "112:7:149",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47094,
+                  "src": "104:15:149",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 47090,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "104:7:149",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "103:17:149"
+            },
+            "returnParameters": {
+              "id": 47093,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "129:0:149"
+            },
+            "scope": 47105,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 47097,
+            "nodeType": "FunctionDefinition",
+            "src": "136:26:149",
+            "functionSelector": "4e71d92d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claim",
+            "nameLocation": "145:5:149",
+            "parameters": {
+              "id": 47095,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "150:2:149"
+            },
+            "returnParameters": {
+              "id": 47096,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "161:0:149"
+            },
+            "scope": 47105,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 47104,
+            "nodeType": "FunctionDefinition",
+            "src": "168:72:149",
+            "functionSelector": "fc2f53b6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPendingVeJoe",
+            "nameLocation": "177:15:149",
+            "parameters": {
+              "id": 47100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47099,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "201:5:149",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47104,
+                  "src": "193:13:149",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 47098,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "193:7:149",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "192:15:149"
+            },
+            "returnParameters": {
+              "id": 47103,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47102,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47104,
+                  "src": "231:7:149",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 47101,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "231:7:149",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "230:9:149"
+            },
+            "scope": 47105,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IVeJoeStaking",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          47105
+        ],
+        "name": "IVeJoeStaking",
+        "nameLocation": "67:13:149",
+        "scope": 47106,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 149
+}

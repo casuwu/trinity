@@ -1,0 +1,24 @@
+.env
+package-lock.json
+yarn.lock
+
+abis
+dapp
+deploy
+deprecated
+node_modules
+_scripts
+test
+solcInputs
+flatten
+
+#Hardhat files
+cache
+artifacts
+
+.DS_Store
+.vscode
+.mocharc.json
+
+#Localfiles
+deployments/localhost/

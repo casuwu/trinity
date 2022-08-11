@@ -1,0 +1,130 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "PID",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "PID()": "5eaec0e4"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/platypus/interfaces/IPlatypusStrategy.sol",
+    "id": 43390,
+    "exportedSymbols": {
+      "IPlatypusStrategy": [
+        43389
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:104:126",
+    "nodes": [
+      {
+        "id": 43383,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:126",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 43389,
+        "nodeType": "ContractDefinition",
+        "src": "57:78:126",
+        "nodes": [
+          {
+            "id": 43388,
+            "nodeType": "FunctionDefinition",
+            "src": "91:42:126",
+            "functionSelector": "5eaec0e4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "PID",
+            "nameLocation": "100:3:126",
+            "parameters": {
+              "id": 43384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "103:2:126"
+            },
+            "returnParameters": {
+              "id": 43387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 43386,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 43388,
+                  "src": "124:7:126",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 43385,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "124:7:126",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "123:9:126"
+            },
+            "scope": 43389,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPlatypusStrategy",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          43389
+        ],
+        "name": "IPlatypusStrategy",
+        "nameLocation": "67:17:126",
+        "scope": 43390,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 126
+}

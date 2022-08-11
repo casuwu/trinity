@@ -1,0 +1,195 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_poolId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amountLD",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "addLiquidity",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addLiquidity(uint256,uint256,address)": "87b21efc"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/stargate/interfaces/IStargateRouter.sol",
+    "id": 44420,
+    "exportedSymbols": {
+      "IStargateRouter": [
+        44419
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:170:134",
+    "nodes": [
+      {
+        "id": 44409,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:134",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 44419,
+        "nodeType": "ContractDefinition",
+        "src": "57:144:134",
+        "nodes": [
+          {
+            "id": 44418,
+            "nodeType": "FunctionDefinition",
+            "src": "89:110:134",
+            "functionSelector": "87b21efc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addLiquidity",
+            "nameLocation": "98:12:134",
+            "parameters": {
+              "id": 44416,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44411,
+                  "mutability": "mutable",
+                  "name": "_poolId",
+                  "nameLocation": "128:7:134",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44418,
+                  "src": "120:15:134",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44410,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "120:7:134",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44413,
+                  "mutability": "mutable",
+                  "name": "_amountLD",
+                  "nameLocation": "153:9:134",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44418,
+                  "src": "145:17:134",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44412,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:134",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44415,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "180:3:134",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44418,
+                  "src": "172:11:134",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44414,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "172:7:134",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "110:79:134"
+            },
+            "returnParameters": {
+              "id": 44417,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "198:0:134"
+            },
+            "scope": 44419,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IStargateRouter",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44419
+        ],
+        "name": "IStargateRouter",
+        "nameLocation": "67:15:134",
+        "scope": 44420,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 134
+}

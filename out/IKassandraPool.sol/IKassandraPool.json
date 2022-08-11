@@ -1,0 +1,229 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenIn",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenAmountIn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minPoolAmountOut",
+          "type": "uint256"
+        }
+      ],
+      "name": "joinswapExternAmountIn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "poolAmountOut",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "joinswapExternAmountIn(address,uint256,uint256)": "5db34277"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/kassandra/interfaces/IKassandraPool.sol",
+    "id": 35670,
+    "exportedSymbols": {
+      "IKassandraPool": [
+        35669
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:228:104",
+    "nodes": [
+      {
+        "id": 35657,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:104",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 35669,
+        "nodeType": "ContractDefinition",
+        "src": "57:202:104",
+        "nodes": [
+          {
+            "id": 35668,
+            "nodeType": "FunctionDefinition",
+            "src": "88:169:104",
+            "functionSelector": "5db34277",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "joinswapExternAmountIn",
+            "nameLocation": "97:22:104",
+            "parameters": {
+              "id": 35664,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35659,
+                  "mutability": "mutable",
+                  "name": "tokenIn",
+                  "nameLocation": "137:7:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35668,
+                  "src": "129:15:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 35658,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "129:7:104",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35661,
+                  "mutability": "mutable",
+                  "name": "tokenAmountIn",
+                  "nameLocation": "162:13:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35668,
+                  "src": "154:21:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35660,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "154:7:104",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35663,
+                  "mutability": "mutable",
+                  "name": "minPoolAmountOut",
+                  "nameLocation": "193:16:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35668,
+                  "src": "185:24:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35662,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:7:104",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "119:96:104"
+            },
+            "returnParameters": {
+              "id": 35667,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35666,
+                  "mutability": "mutable",
+                  "name": "poolAmountOut",
+                  "nameLocation": "242:13:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35668,
+                  "src": "234:21:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35665,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "234:7:104",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "233:23:104"
+            },
+            "scope": 35669,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IKassandraPool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          35669
+        ],
+        "name": "IKassandraPool",
+        "nameLocation": "67:14:104",
+        "scope": 35670,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 104
+}

@@ -1,0 +1,261 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minUsdg",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minGlp",
+          "type": "uint256"
+        }
+      ],
+      "name": "addLiquidity",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addLiquidity(address,uint256,uint256,uint256)": "1ece366a"
+  },
+  "ast": {
+    "absolutePath": "src/contracts/strategies/gmx/interfaces/IGMXGlpManager.sol",
+    "id": 34650,
+    "exportedSymbols": {
+      "IGMXGlpManager": [
+        34649
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:214:95",
+    "nodes": [
+      {
+        "id": 34635,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:95",
+        "literals": [
+          "solidity",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 34649,
+        "nodeType": "ContractDefinition",
+        "src": "57:188:95",
+        "nodes": [
+          {
+            "id": 34648,
+            "nodeType": "FunctionDefinition",
+            "src": "88:155:95",
+            "functionSelector": "1ece366a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addLiquidity",
+            "nameLocation": "97:12:95",
+            "parameters": {
+              "id": 34644,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34637,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "127:6:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34648,
+                  "src": "119:14:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34636,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "119:7:95",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34639,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "151:7:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34648,
+                  "src": "143:15:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34638,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "143:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34641,
+                  "mutability": "mutable",
+                  "name": "_minUsdg",
+                  "nameLocation": "176:8:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34648,
+                  "src": "168:16:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34640,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "168:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 34643,
+                  "mutability": "mutable",
+                  "name": "_minGlp",
+                  "nameLocation": "202:7:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34648,
+                  "src": "194:15:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34642,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "109:106:95"
+            },
+            "returnParameters": {
+              "id": 34647,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34646,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34648,
+                  "src": "234:7:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 34645,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "234:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "233:9:95"
+            },
+            "scope": 34649,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGMXGlpManager",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          34649
+        ],
+        "name": "IGMXGlpManager",
+        "nameLocation": "67:14:95",
+        "scope": 34650,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 95
+}

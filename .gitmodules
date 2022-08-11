@@ -1,0 +1,12 @@
+[submodule "lib/smart-contracts"]
+	path = lib/smart-contracts
+	url = https://github.com/yieldyak/smart-contracts
+[submodule "lib/remcomath"]
+	path = lib/remcomath
+	url = https://github.com/0xclandestine/remcomath
+[submodule "lib/solmate"]
+	path = lib/solmate
+	url = https://github.com/rari-capital/solmate
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
