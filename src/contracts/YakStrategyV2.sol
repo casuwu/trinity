@@ -50,7 +50,7 @@ abstract contract YakStrategyV2 is YakERC20, Ownable, Permissioned {
      * @notice Throws if called by smart contract
      */
     modifier onlyEOA() {
-        require(tx.origin == msg.sender, "YakStrategy::onlyEOA");
+        require(tx.origin == msg.sender, "onlyEOA");
         _;
     }
 
@@ -58,7 +58,7 @@ abstract contract YakStrategyV2 is YakERC20, Ownable, Permissioned {
      * @notice Only called by dev
      */
     modifier onlyDev() {
-        require(msg.sender == devAddr, "YakStrategy::onlyDev");
+        require(msg.sender == devAddr, "YonlyDev");
         _;
     }
 
@@ -168,6 +168,7 @@ abstract contract YakStrategyV2 is YakERC20, Ownable, Permissioned {
         if (totalSupply.mul(totalDeposits()) == 0) {
             return amount;
         }
+        //fixedpoint muldiv
         return amount.mul(totalSupply).div(totalDeposits());
     }
 
@@ -180,6 +181,7 @@ abstract contract YakStrategyV2 is YakERC20, Ownable, Permissioned {
         if (totalSupply.mul(totalDeposits()) == 0) {
             return 0;
         }
+        // bring fixedpoint muldiv
         return amount.mul(totalDeposits()).div(totalSupply);
     }
 
@@ -263,10 +265,10 @@ abstract contract YakStrategyV2 is YakERC20, Ownable, Permissioned {
     }
 
     /**
-     * @notice Recover AVAX from contract
+     * @notice Recover WETH from contract
      * @param amount amount
      */
-    function recoverAVAX(uint256 amount) external onlyOwner {
+    function recoverWETH(uint256 amount) external onlyOwner {
         require(amount > 0);
         payable(msg.sender).transfer(amount);
         emit Recovered(address(0), amount);

@@ -831,19 +831,6 @@
     {
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "amount",
-          "type": "uint256"
-        }
-      ],
-      "name": "recoverAVAX",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
           "internalType": "address",
           "name": "tokenAddress",
           "type": "address"
@@ -855,6 +842,19 @@
         }
       ],
       "name": "recoverERC20",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "recoverWETH",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -1189,8 +1189,8 @@
     "numberOfAllowedDepositors()": "3bdc6e72",
     "owner()": "8da5cb5b",
     "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": "d505accf",
-    "recoverAVAX(uint256)": "4ebb7916",
     "recoverERC20(address,uint256)": "8980f11f",
+    "recoverWETH(uint256)": "3ebf89f1",
     "reinvest()": "fdb5a03e",
     "removeDepositor(address)": "8b73e606",
     "renounceOwnership()": "715018a6",
@@ -1214,40 +1214,40 @@
   },
   "ast": {
     "absolutePath": "src/contracts/YakStrategyV2Payable.sol",
-    "id": 2519,
+    "id": 1646,
     "exportedSymbols": {
       "Context": [
-        6165
+        2435
       ],
       "IERC20": [
-        5340
+        1746
       ],
       "Ownable": [
-        8103
+        3623
       ],
       "Permissioned": [
-        8223
+        3743
       ],
       "SafeMath": [
-        8799
+        4319
       ],
       "YakERC20": [
         1065
       ],
       "YakStrategyV2": [
-        2496
+        1623
       ],
       "YakStrategyV2Payable": [
-        2518
+        1645
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "32:782:5",
+    "src": "32:782:3",
     "nodes": [
       {
-        "id": 2498,
+        "id": 1625,
         "nodeType": "PragmaDirective",
-        "src": "32:23:5",
+        "src": "32:23:3",
         "literals": [
           "solidity",
           "0.8",
@@ -1255,90 +1255,90 @@
         ]
       },
       {
-        "id": 2499,
+        "id": 1626,
         "nodeType": "ImportDirective",
-        "src": "57:28:5",
+        "src": "57:28:3",
         "absolutePath": "src/contracts/lib/SafeMath.sol",
         "file": "./lib/SafeMath.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2519,
-        "sourceUnit": 8800,
+        "scope": 1646,
+        "sourceUnit": 4320,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 2500,
+        "id": 1627,
         "nodeType": "ImportDirective",
-        "src": "86:27:5",
+        "src": "86:27:3",
         "absolutePath": "src/contracts/lib/Ownable.sol",
         "file": "./lib/Ownable.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2519,
-        "sourceUnit": 8104,
+        "scope": 1646,
+        "sourceUnit": 3624,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 2501,
+        "id": 1628,
         "nodeType": "ImportDirective",
-        "src": "114:32:5",
+        "src": "114:32:3",
         "absolutePath": "src/contracts/lib/Permissioned.sol",
         "file": "./lib/Permissioned.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2519,
-        "sourceUnit": 8224,
+        "scope": 1646,
+        "sourceUnit": 3744,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 2502,
+        "id": 1629,
         "nodeType": "ImportDirective",
-        "src": "147:33:5",
+        "src": "147:33:3",
         "absolutePath": "src/contracts/interfaces/IERC20.sol",
         "file": "./interfaces/IERC20.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2519,
-        "sourceUnit": 5341,
+        "scope": 1646,
+        "sourceUnit": 1747,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 2503,
+        "id": 1630,
         "nodeType": "ImportDirective",
-        "src": "181:24:5",
+        "src": "181:24:3",
         "absolutePath": "src/contracts/YakERC20.sol",
         "file": "./YakERC20.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2519,
+        "scope": 1646,
         "sourceUnit": 1066,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 2504,
+        "id": 1631,
         "nodeType": "ImportDirective",
-        "src": "206:29:5",
+        "src": "206:29:3",
         "absolutePath": "src/contracts/YakStrategyV2.sol",
         "file": "./YakStrategyV2.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 2519,
-        "sourceUnit": 2497,
+        "scope": 1646,
+        "sourceUnit": 1624,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 2518,
+        "id": 1645,
         "nodeType": "ContractDefinition",
-        "src": "306:507:5",
+        "src": "306:507:3",
         "nodes": [
           {
-            "id": 2511,
+            "id": 1638,
             "nodeType": "FunctionDefinition",
-            "src": "514:44:5",
+            "src": "514:44:3",
             "documentation": {
-              "id": 2508,
+              "id": 1635,
               "nodeType": "StructuredDocumentation",
-              "src": "368:141:5",
+              "src": "368:141:3",
               "text": " @notice Deposit and deploy deposits tokens to the strategy using AVAX\n @dev Must mint receipt tokens to `msg.sender`"
             },
             "functionSelector": "d0e30db0",
@@ -1346,32 +1346,32 @@
             "kind": "function",
             "modifiers": [],
             "name": "deposit",
-            "nameLocation": "523:7:5",
+            "nameLocation": "523:7:3",
             "parameters": {
-              "id": 2509,
+              "id": 1636,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "530:2:5"
+              "src": "530:2:3"
             },
             "returnParameters": {
-              "id": 2510,
+              "id": 1637,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "557:0:5"
+              "src": "557:0:3"
             },
-            "scope": 2518,
+            "scope": 1645,
             "stateMutability": "payable",
             "virtual": true,
             "visibility": "external"
           },
           {
-            "id": 2517,
+            "id": 1644,
             "nodeType": "FunctionDefinition",
-            "src": "749:62:5",
+            "src": "749:62:3",
             "documentation": {
-              "id": 2512,
+              "id": 1639,
               "nodeType": "StructuredDocumentation",
-              "src": "564:180:5",
+              "src": "564:180:3",
               "text": " @notice Deposit on behalf of another account using AVAX\n @dev Must mint receipt tokens to `account`\n @param account address to receive receipt tokens"
             },
             "functionSelector": "aa67c919",
@@ -1379,20 +1379,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "depositFor",
-            "nameLocation": "758:10:5",
+            "nameLocation": "758:10:3",
             "parameters": {
-              "id": 2515,
+              "id": 1642,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2514,
+                  "id": 1641,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "777:7:5",
+                  "nameLocation": "777:7:3",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2517,
-                  "src": "769:15:5",
+                  "scope": 1644,
+                  "src": "769:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1400,10 +1400,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2513,
+                    "id": 1640,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "769:7:5",
+                    "src": "769:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1413,15 +1413,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "768:17:5"
+              "src": "768:17:3"
             },
             "returnParameters": {
-              "id": 2516,
+              "id": 1643,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "810:0:5"
+              "src": "810:0:3"
             },
-            "scope": 2518,
+            "scope": 1645,
             "stateMutability": "payable",
             "virtual": true,
             "visibility": "external"
@@ -1431,42 +1431,42 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 2506,
+              "id": 1633,
               "name": "YakStrategyV2",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 2496,
-              "src": "348:13:5"
+              "referencedDeclaration": 1623,
+              "src": "348:13:3"
             },
-            "id": 2507,
+            "id": 1634,
             "nodeType": "InheritanceSpecifier",
-            "src": "348:13:5"
+            "src": "348:13:3"
           }
         ],
         "canonicalName": "YakStrategyV2Payable",
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 2505,
+          "id": 1632,
           "nodeType": "StructuredDocumentation",
-          "src": "237:68:5",
+          "src": "237:68:3",
           "text": " @notice YakStrategy should be inherited by new strategies"
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          2518,
-          2496,
-          8223,
-          8103,
-          6165,
+          1645,
+          1623,
+          3743,
+          3623,
+          2435,
           1065
         ],
         "name": "YakStrategyV2Payable",
-        "nameLocation": "324:20:5",
-        "scope": 2519,
+        "nameLocation": "324:20:3",
+        "scope": 1646,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 5
+  "id": 3
 }

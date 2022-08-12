@@ -4,14 +4,15 @@ pragma solidity 0.8.13;
 import "./SafeMath.sol";
 import "./SafeERC20.sol";
 import "../interfaces/IPair.sol";
-import "../interfaces/IWAVAX.sol";
+import "../interfaces/IWETH.sol";
 
 library DexLibrary {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
     bytes private constant zeroBytes = new bytes(0);
-    IWAVAX private constant WAVAX = IWAVAX(0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7);
+    //change to eth address
+    IWETH private constant WETH = IWETH(0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7);
 
     /**
      * @notice Swap directly through a Pair
@@ -74,8 +75,8 @@ library DexLibrary {
         IPair swapPairToken0,
         IPair swapPairToken1
     ) internal returns (uint256) {
-        uint256 amountIn = amount.div(2);
-        require(amountIn > 0, "DexLibrary::_convertRewardTokensToDepositTokens");
+        uint256 amountIn = amount >> 1;
+        require(amountIn > 0, "!AMOUNT");
 
         address token0 = IPair(depositToken).token0();
         uint256 amountOutToken0 = amountIn;
@@ -121,7 +122,7 @@ library DexLibrary {
      * @notice Quote liquidity amount out
      * @param amountIn input tokens
      * @param reserve0 size of input asset reserve
-     * @param reserve1 size of output asset reserve
+     * @param reserve1 size of output asset reserve     
      * @return liquidity tokens
      */
     function _quoteLiquidityAmountOut(

@@ -4,7 +4,7 @@ pragma solidity 0.8.13;
 import "./lib/SafeMath.sol";
 import "./lib/AccessControl.sol";
 import "./timelocks/YakFeeCollectorV1.sol";
-import "./interfaces/IWAVAX.sol";
+import "./interfaces/IWETH.sol";
 
 /**
  * @notice YakARC is an Automated Revenue Collector
@@ -21,7 +21,7 @@ contract YakARC is AccessControl {
     bytes32 public constant DISTRIBUTION_UPDATER_ROLE = keccak256("DISTRIBUTION_UPDATER_ROLE");
 
     /// @dev WAVAX
-    IWAVAX private constant WAVAX = IWAVAX(0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7);
+    IWETH private constant WETH = IWETH(0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7);
 
     /// @notice YakFeeCollectorV1 address
     YakFeeCollectorV1 public feeCollector;
@@ -90,17 +90,17 @@ contract YakARC is AccessControl {
      * @return balance
      */
     function currentBalance() external view returns (uint256) {
-        return WAVAX.balanceOf(address(feeCollector)).add(address(feeCollector).balance);
+        return WETH.balanceOf(address(feeCollector)).add(address(feeCollector).balance);
     }
 
-    function _sweepWAVAX() internal {
-        uint256 balance = WAVAX.balanceOf(address(feeCollector));
+    function _sweepWETH() internal {
+        uint256 balance = WETH.balanceOf(address(feeCollector));
         if (balance > 0) {
-            feeCollector.sweepTokens(address(WAVAX), balance);
+            feeCollector.sweepTokens(address(WETH), balance);
         }
     }
 
-    function _sweepAVAX() internal {
+    function _sweepETH() internal {
         uint256 balance = address(feeCollector).balance;
         if (balance > 0) {
             feeCollector.sweepAVAX(balance);
@@ -114,9 +114,9 @@ contract YakARC is AccessControl {
      */
     function distribute() external {
         require(nextEpoch() <= block.timestamp, "distribute::too soon");
-        _sweepAVAX();
-        _sweepWAVAX();
-        WAVAX.withdraw(WAVAX.balanceOf(address(this)));
+        _sweepETH();
+        _sweepWETH();
+        WETH.withdraw(WETH.balanceOf(address(this)));
         uint256 balance = address(this).balance;
         uint256 totalPaid;
         for (uint256 i; i < distributionAddresses.length; i++) {
@@ -141,7 +141,7 @@ contract YakARC is AccessControl {
      */
     function sweepTokens(address tokenAddress, uint256 tokenAmount) external {
         require(hasRole(TOKEN_SWEEPER_ROLE, msg.sender), "sweepTokens::auth");
-        require(tokenAddress != address(WAVAX), "sweepTokens::not allowed");
+        require(tokenAddress != address(WETH), "sweepTokens::not allowed");
         feeCollector.sweepTokens(tokenAddress, tokenAmount);
         uint256 balance = IERC20(tokenAddress).balanceOf(address(this));
         if (balance < tokenAmount) {
