@@ -14,3 +14,6 @@
 [submodule "lib/RemcoMath"]
 	path = lib/RemcoMath
 	url = https://github.com/0xclandestine/RemcoMath
+[submodule "src/ac/lib/forge-std"]
+	path = src/ac/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
